@@ -77,7 +77,32 @@ $paragraphs = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis re
 
 $paragraph = explode('. ', $paragraphs);
 ?>
+<?php
+ 
+ $db = [
+     'teachers' => [
+         [
+             'name' => 'Michele',
+             'lastname' => 'Papagni'
+         ],
+         [
+             'name' => 'Fabio',
+             'lastname' => 'Forghieri'
+         ]
+     ],
+     'pm' => [
+         [
+             'name' => 'Roberto',
+             'lastname' => 'Marazzini'
+         ],
+         [
+             'name' => 'Federico',
+             'lastname' => 'Pellegrini'
+         ]
+     ]
+ ];
 
+?>
 <!DOCTYPE html>
 <html lang="en">
 
@@ -86,6 +111,7 @@ $paragraph = explode('. ', $paragraphs);
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
     <title>php snacks</title>
 </head>
 
@@ -155,6 +181,11 @@ $paragraph = explode('. ', $paragraphs);
                     echo $paragraph[$i];
                 }
             ?>
+        </section>
+        <section class="d-flex flex-column align-items-center">
+            <h2 class="text-center pt-5">Snack 6</h2>
+            <div class="box"><?php foreach ($db as $key => $value) { echo $key . ' ' . $value[''] . '<br>'; } ?></div>
+            <div class="box"></div>
         </section>
     </main>
 </body>
