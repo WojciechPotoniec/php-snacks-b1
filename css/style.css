@@ -1,0 +1,10 @@
+.box{
+    width: 150px;
+    height: 100px;
+}
+.teachers{
+    border: 1px solid grey;
+}
+.pm{
+    border: 1px solid green;
+}
