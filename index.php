@@ -121,16 +121,32 @@ $posts = [
         <!-- SNACK 3 -->
         <section class="d-flex flex-column align-items-center">
             <h2 class="text-center pt-5">Snack 3</h2>
-            <?php 
+            <?php
             foreach ($posts as $post) {
                 foreach ($post as $key => $value) {
-                    echo  $value['title'] . ' ' . $value['author'] . ' ' . $value['text'] . '<br>';
-                }}
+                    echo $value['title'] . ' ' . $value['author'] . ' ' . $value['text'] . '<br>';
+                }
+            }
             ?>
         </section>
         <section class="d-flex flex-column align-items-center">
-                <h2 class="text-center pt-5">Snack 4</h2>
-                
+            <h2 class="text-center pt-5">Snack 4</h2>
+            <?php
+                function getArrayOfIntegers($min, $max, $nItems) {
+                    $numbers = [];
+                    while (count($numbers) < $nItems) {
+                        $number = rand($min, $max);
+                        if(!in_array($number, $numbers)){
+                            $numbers[] = $number;
+                        };
+                };
+                return $numbers;
+            };
+            ?>
+            <span><?php foreach (getArrayOfIntegers(1, 100, 15) as $number) { echo $number . ' '; }?></span>
+        </section>
+        <section class="d-flex flex-column align-items-center">
+            <h2>Snack 5</h2>
         </section>
     </main>
 </body>
