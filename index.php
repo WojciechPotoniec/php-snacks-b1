@@ -33,8 +33,6 @@ $matches = [
 ];
 ?>
 <?php
-
-
 $posts = [
     '10/01/2019' => [
         [
@@ -73,6 +71,11 @@ $posts = [
         ]
     ],
 ];
+?>
+<?php 
+$paragraphs = 'Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis reiciendis quibusdam obcaecati, temporibus ad architecto cupiditate expedita quidem hic laudantium, commodi nemo odit laborum! Adipisci ratione iusto perferendis animi mollitia.';
+
+$paragraph = explode('. ', $paragraphs);
 ?>
 
 <!DOCTYPE html>
@@ -146,7 +149,12 @@ $posts = [
             <span><?php foreach (getArrayOfIntegers(1, 100, 15) as $number) { echo $number . ' '; }?></span>
         </section>
         <section class="d-flex flex-column align-items-center">
-            <h2>Snack 5</h2>
+            <h2 class="text-center pt-5">Snack 5</h2>
+            <?php 
+                for($i = 0; $i < count($paragraph); $i++){
+                    echo $paragraph[$i];
+                }
+            ?>
         </section>
     </main>
 </body>
