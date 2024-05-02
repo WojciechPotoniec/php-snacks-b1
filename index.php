@@ -116,6 +116,26 @@ $paragraph = explode('. ', $paragraphs);
 </head>
 
 <body>
+    <header>
+    <h1 class="text-center">Snack PHP</h1>
+        <ul class="nav">
+            <li class="nav-item">
+                <a class="nav-link" href="index.php">Home</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="snack-1.php">Snack 1</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="snack-2.php">Snack 2</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="snack-3.php">Snack 3</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="snack-4.php">Snack 4</a>
+            </li>
+        </ul>
+    </header>
     <main>
         <!-- SNACK 1 -->
         <section class="d-flex flex-column align-items-center">
